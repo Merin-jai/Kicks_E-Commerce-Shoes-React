@@ -1,6 +1,8 @@
 import React from 'react';
 import '../Styles/main_components.css';
 import { TiArrowSortedDown } from "react-icons/ti";
+import { IoSearch } from "react-icons/io5";
+import { FaUser } from "react-icons/fa6";
 import Logo from '../assests/img/Logo.png';
 const Header = () => {
   return (
@@ -21,7 +23,11 @@ const Header = () => {
 
         </div>
         <div className='header-right'>
-            <label>aaa</label>
+            <IoSearch className='icons'/>
+            <FaUser className='icons'/>
+            <div className='circle'>
+              <label>0</label>
+            </div>
         </div>
     </div>
   )
