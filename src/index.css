@@ -7,6 +7,10 @@
   font-family: "Rubik-Bold";
   src: url('assests/font/Rubik/Rubik-Bold.ttf');
 }
+@font-face {
+  font-family: "OpenSans";
+  src: url('assests/font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+}
 
 body {
   margin: 0;
