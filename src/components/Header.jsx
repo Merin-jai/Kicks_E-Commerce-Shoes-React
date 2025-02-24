@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from '../assests/img/Logo.png';
 const Header = () => {
-  const [menuOpen,setMenuOpen]=useState(false);
+  const [menuOpen,setMenuOpen]=useState(true);
 
   return (
     <div className='header-container'>
@@ -15,8 +15,9 @@ const Header = () => {
         <div className='hamburger-menu' onClick={()=>setMenuOpen(!menuOpen)}>
                 <RxHamburgerMenu/>
         </div> 
+        {/* if menu is opened it will be displayed */}
         {/* header right */}
-        <div className='header-left'>
+        <div className={`${menuOpen?"header-left-mobile":"header-left"}`}>
             <div>New Drops 🔥</div>
             <div className='Arrow'>
                 <label>Men</label>
