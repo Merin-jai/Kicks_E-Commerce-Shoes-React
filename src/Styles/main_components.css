@@ -1,0 +1,33 @@
+body {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 5vh;
+}
+/* Header */
+.header-container {
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    padding: 2.5%;
+    border-radius: 1.5vw;
+    display: flex;
+    font-family: "Rubik-bold";
+    height: 6.25vw;
+    align-items: center;
+}
+
+.header-left
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+.Arrow{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* end of header */
