@@ -14,8 +14,9 @@ body {
     height: 6.25vw;
     align-items: center;
     justify-content: space-between
-
-
+}
+.hamburger-menu{
+    display: none;
 }
 
 .header-left
@@ -31,6 +32,7 @@ body {
 }
 .header-right{
     display: flex;
+    align-items: center;
     gap : 3vw;
 }
 .icons{
@@ -52,6 +54,40 @@ body {
     font-family: "Rubik";
     font-weight: 600;
     font-size: 1vw;
+}
+
+
+/* shows hamburger menu for small screens */
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .header-left, .search {
+        display: none; /* Hide Navigation Links */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .header-middle img{
+        text-align: center;
+        height: 5vw;
+        width: auto;
+        min-height: 20px; 
+    }
+    .icons{
+        font-size: 3.5vw;
+    }
+    .circle{
+        min-width: 5vw;
+        min-height: 5vw;
+        font-size: 3vw;
+        padding: 1%;
+    }
 }
 
 
