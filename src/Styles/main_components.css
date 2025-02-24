@@ -105,3 +105,52 @@ body {
 
 
 /* end of header */
+
+/* Footer Component */
+.footer-container{
+  
+}
+
+.frame1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #4A69E2;
+    border-radius: 4vw;
+    padding: 5%;
+    color: white;
+}
+
+.frame1-left
+{
+    display: flex;
+    flex-direction: column;
+}
+.f1-left-top{
+    display: flex;
+    flex-direction: column;
+}
+.f1-left-top h1{
+    font-family: "Rubik-bold";
+    white-space: wrap;
+    font-weight: 600;
+}
+.f1-left-top label{
+    font-family: 'OpenSans';
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.frame1-right{
+    display: flex;
+    align-items: center;
+}
+.frame1-right span{
+    position: relative;
+}
+
+
+
+/* End of footer */
