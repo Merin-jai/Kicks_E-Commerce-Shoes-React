@@ -5,12 +5,14 @@
     background-color: #e8e6e0;
     color: black;
     padding: 30px;
+    padding-left: 70px;
+    padding-right: 0;
 }
 
 /* Form Box */
 .register-box {
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
     color: #232321;
 }
 
@@ -86,7 +88,7 @@
     background-color: #e8e6e0;
     border: 1px solid #232321;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 1rem;
 }
 

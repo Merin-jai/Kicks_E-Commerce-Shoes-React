@@ -7,3 +7,54 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 768px) {
+    .Register-content{
+        flex-direction: column;
+    }
+    .register-container {
+        padding: 20px;
+    }
+
+    .join-container {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .join-box {
+        max-width: 100%;
+        width: 90%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .join-title {
+        font-size: 1.5rem;
+    }
+
+    .join-text {
+        font-size: 0.95rem;
+    }
+
+    .join-benefits li {
+        font-size: 0.95rem;
+    }
+
+    .join-btn {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+.Login-container{
+    display: flex;
+    flex-direction: column;
+}
+.Login-content
+{
+    display: flex;
+    justify-content: space-between;
+}
