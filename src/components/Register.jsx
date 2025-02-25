@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { useNavigate } from "react-router-dom";
 import {auth,googleProvider,createUserWithEmailAndPassword,signInWithPopup,updateProfile} from "../firebase";
 import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -10,6 +11,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const navigate = useNavigate();
 
     // Register User with Email & Password
   const handleRegister = async () => {
@@ -31,6 +33,7 @@ const Register = () => {
       setFirstName("");
       setLastName("");
       setPassword("");
+      navigate("/login");
     } catch (error) {
       alert(error.message);
     }

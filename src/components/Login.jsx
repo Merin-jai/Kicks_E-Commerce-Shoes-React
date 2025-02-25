@@ -21,6 +21,8 @@ const Login = () => {
         } catch (error) {
           alert(error.message);
         }
+        setEmail("");
+        setPassword("");
     };
     
       // Handle Google Sign-In
