@@ -134,9 +134,12 @@ body {
 .f1-left-top h1 {
     font-family: "Rubik-bold";
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 4rem;
     max-width: 700px;
     /* white-space: nowrap; */
+}
+.mobile{
+    display: none;
 }
 
 .f1-left-top label {
@@ -287,11 +290,23 @@ body {
     .frame1 {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        /* text-align: center; */
+    }
+    .f1-left-top h1 {
+        font-size: 2rem;
+        margin-bottom: 1vw;
+    }
+    .mobile
+    {
+        display: block;
+    }
+    .bigscreen
+    {
+        display: none;
     }
 
     .f1-left-down {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
     }
 
@@ -300,21 +315,30 @@ body {
     }
 
     .frame1-right {
-        justify-content: center;
-        margin-top: 1rem;
+        /* justify-content: center; */
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .frame1-right img {
+        width: 50%;
+    }
+    .frame1-right .circle
+    {
+        margin-top: -60px;
+        width: 1px;
+        height: 1px
     }
 
-    .frame2 {
-        text-align: center;
+    .about-us h2, 
+    .categories h2, 
+    .company h2, 
+    .follow-us h2 {
+        font-size: 1.5rem;
     }
-
     .f2-top {
         grid-template-columns: 1fr;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
 }
 
 

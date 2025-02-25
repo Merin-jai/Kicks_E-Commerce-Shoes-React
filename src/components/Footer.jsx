@@ -12,7 +12,8 @@ const Footer = () => {
         <div className='frame1-left'>
           <div className='f1-left-top'>
             <>
-                <h1>JOIN OUR KICKSPLUS CLUB & GET 15% OFF</h1>
+                <h1 className='bigscreen'>JOIN OUR KICKSPLUS CLUB & GET 15% OFF</h1>
+                <h1 className='mobile'>Join our KicksPlus Club & get 15% off</h1>
             </>
             <label>Sign up for free! Join the community.</label>
           </div>
