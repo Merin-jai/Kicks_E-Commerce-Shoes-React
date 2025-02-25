@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from '../assests/img/Logo.png';
 const Header = () => {
-  const [menuOpen,setMenuOpen]=useState(true);
+  const [menuOpen,setMenuOpen]=useState(false);
 
   return (
     <div className='header-container'>
