@@ -1,40 +1,76 @@
 .product-card {
-    background-color: white;
+    /* background-color: white; */
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    /* box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15); Improved shadow */
+    /* text-align: center; */
     position: relative;
-  }
-  
-  .product-tag {
+    transition: transform 0.3s ease;
+    max-width: 300px; /* Keep card width consistent */
+}
+
+/* Add Hover Effect */
+/* .product-tag:hover,.product-image-container:hover {
+    transform: scale(1.02);
+} */
+
+/* Product Tag Styling */
+.product-tag {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ff9800;
+    /* top: 5.4%; */
+    top: 23px;
+    left: 23px;
+    background-color: #4A69E2;
     color: white;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 5px;
-  }
-  
-  .product-image {
+    padding: 12px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 12px 0 24px 0; 
+}
+
+/* Product Image Container */
+.product-image-container {
     width: 100%;
-    border-radius: 10px;
-  }
-  
-  .product-title {
-    font-size: 1rem;
-    margin: 10px 0;
-  }
-  
-  .view-product-btn {
+    border-radius: 24px;
+    border: 8px solid white;
+    overflow: hidden; /* Ensures rounded edges apply to the image */
+    background-color: white;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    /* border-radius: 12px; */
+    object-fit: cover; 
+}
+
+/* Product Title */
+.product-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #232321;
+    font-family: "Rubik-bold";
+}
+
+/* View Product Button */
+.view-product-btn {
     background-color: black;
     color: white;
-    font-size: 0.9rem;
-    padding: 10px;
+    font-size: 0.95rem;
+    padding: 12px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-  }
-  
+    width: 100%;
+    font-weight:500;
+    transition: background 0.3s ease;
+    font-family: "Rubik-medium";
+}
+
+.view-product-btn:hover {
+    transform: scale(1.02);
+}
+.product-price{
+    color: #FFA52F;
+}

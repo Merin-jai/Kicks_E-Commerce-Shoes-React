@@ -199,3 +199,53 @@
     }
 }
 
+
+/* New DROPS PAGE */
+
+.new-drops-container {
+    padding: 40px;
+    /* background-color: #f5f5f5; */
+  }
+  
+  .new-drops-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .new-drops-header h2{
+    font-size: 4.5vw;
+    font-family: "Rubik-bold";
+    max-width: 600px;
+    margin: 0;
+  }
+  
+  .shop-btn {
+    background-color: #4A69E2;
+    color: white;
+    font-size: 1rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 5px; */
+    margin-top: 20px;
+  }
+  
+  /* Responsive Mobile View */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-grid {
+      /* grid-template-columns: 1fr; 1 column on small screens */
+    }
+  }
+  
