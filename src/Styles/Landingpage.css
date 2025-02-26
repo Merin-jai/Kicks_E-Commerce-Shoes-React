@@ -238,8 +238,26 @@
   
   /* Responsive Mobile View */
   @media (max-width: 768px) {
+    .new-drops-container{
+        padding: 0;
+    }
     .product-grid {
       grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+    .product-title {
+        font-size: 0.8rem;
+    }
+    .view-product-btn{
+        font-size: 0.6rem;
+        padding:  9px 10px;
+    }
+    .shop-btn
+    {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    .product-tag{
+        padding: 3px 10px;
     }
   }
   
