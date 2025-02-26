@@ -11,6 +11,10 @@
   font-family: "OpenSans";
   src: url('assests/font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
 }
+@font-face {
+  font-family: "Rubik-medium";
+  src: url('assests/font/Rubik/Rubik-Medium.ttf');
+}
 
 body {
   margin: 0;
