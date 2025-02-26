@@ -1,0 +1,201 @@
+/* Landing Intro Component */
+
+/* Hero Section */
+.landing-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    /* padding: 40px 20px; */
+    /* background-color: #f5f5f5; */
+}
+
+/* Hero Heading */
+.hero-title {
+    font-size: 15vw;
+    font-weight: bold;
+    color: #232321;
+    font-family: "Rubik-bold";
+    margin: 0;
+    white-space: nowrap;
+}
+
+.highlight {
+    color: #4A69E2; /* Blue accent */
+    text-decoration: none;
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: auto;
+    /* padding: 30px 0; */
+    /* background-color: #f5f5f5; */
+    border-radius: 20px;
+}
+
+/* Nike Product of the Year Badge */
+.product-badge {
+    position: absolute;
+    left: -41px;
+    top: 25%;
+    transform: rotate(-90deg);
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0px 0px 22px 22px;
+    font-size: 1.1rem;
+    /* font-weight: bold; */
+    font-family: "Rubik-bold";
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* Hero Text */
+.hero-text {
+    color: white;
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    z-index: 1;
+    padding-left: 3%;
+    /* background-color: #232321; */
+}
+
+.h-title {
+    font-size: 5vw;
+    font-family: "Rubik-bold";
+    margin: 0;
+}
+
+.hero-description {
+    font-size: 1.5vw;
+    /* margin-top: 10px; */
+    font-family: "OpenSans";
+    max-width: 80%;
+    margin: 0;
+}
+
+/* Shop Button */
+.shop-btn {
+    background-color: #4A69E2;
+    color: white;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    /* font-weight: bold; */
+    font-family: "Rubik-bold";
+}
+
+.shop-btn:hover {
+    background-color: #3748a0;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    /* max-width: 600px; */
+    border-radius: 20px;
+}
+
+/* Small Thumbnail Images */
+.small-thumbnails {
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.small-thumbnails img {
+    width: 160px;
+    height: 160px;
+    border-radius: 25px;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: top left;
+}
+
+.small-thumbnails img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        /* font-size: 2.5rem; */
+    }
+
+    .hero-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-info {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .product-images {
+        margin-top: 20px;
+    }
+
+    .hero-content {
+        /* flex-direction: column; */
+        /* text-align: center; */
+        padding: 0px;
+    }
+
+    .hero-text {
+        /* position: relative; */
+        /* text-align: center; */
+        left: 80;
+        bottom: 80;
+        margin-top: 20px;
+    }
+
+    .product-badge {
+        /* position: relative; */
+        /* transform: none; */
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .main-image {
+        /* max-width: 100%; */
+        object-fit: contain;
+        width: 358px;
+        height: 382px;
+    }
+
+    .small-thumbnails {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
