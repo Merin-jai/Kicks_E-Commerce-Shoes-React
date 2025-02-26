@@ -1,0 +1,90 @@
+/* Categories Section */
+.categories-section {
+    background-color: #111; /* Black background */
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-left: 0 !important;
+}
+
+/* Header (Title + Navigation Arrows) */
+.categories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.categories-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Categories Container */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap : 1px;
+}
+
+/* Category Card */
+.category-card {
+    background-color: #ffffff;
+    flex: 1;  /* Ensures equal width for both */
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Category Image */
+.category-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Category Name & External Link */
+.category-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.category-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+.category-link-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
