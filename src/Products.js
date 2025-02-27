@@ -13,7 +13,7 @@ export const products = [
     },
     {
       id: 2,
-      title: "ADIDAS OZELIA SHOES",
+      title: "ADIDAS OZELIA SHOES Green",
       image: S2,  // Ensure correct path relative to the assets folder
       price: "125",
       tag: "Sale",
@@ -25,6 +25,69 @@ export const products = [
       price: "125",
       tag: "New",
     },
+    {
+        id: 4,
+        title: "ADIDAS ULTRABOOST 1.0 MIAMI",
+        image: S1,  
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 5,
+        title: "ADIDAS OZELIA SHOES Green",
+        image: S2,  // Ensure correct path relative to the assets folder
+        price: "125",
+        tag: "Sale",
+      },
+      {
+        id: 6,
+        title: "ADIDAS 4DFWD 2 RUNNING SHOES",
+        image: S3,
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 7,
+        title: "ADIDAS ULTRABOOST 1.0 MIAMI",
+        image: S1,  
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 8,
+        title: "ADIDAS OZELIA SHOES Green",
+        image: S2,  // Ensure correct path relative to the assets folder
+        price: "125",
+        tag: "Sale",
+      },
+      {
+        id: 9,
+        title: "ADIDAS 4DFWD 2 RUNNING SHOES",
+        image: S3,
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 10,
+        title: "ADIDAS ULTRABOOST 1.0 MIAMI",
+        image: S1,  
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 11,
+        title: "ADIDAS OZELIA SHOES Green",
+        image: S2,  // Ensure correct path relative to the assets folder
+        price: "125",
+        tag: "Sale",
+      },
+      {
+        id: 12,
+        title: "ADIDAS 4DFWD 2 RUNNING SHOES",
+        image: S3,
+        price: "125",
+        tag: "New",
+      },
     // Add more products as needed
   ];
   
