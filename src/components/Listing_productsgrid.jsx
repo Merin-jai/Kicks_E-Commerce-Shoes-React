@@ -13,17 +13,20 @@ const ProductListings = () => {
     // State to keep track of the current page
     const [currentPage, setCurrentPage] = useState(1);
     
-    const productListRef =useRef();
-    // Scroll to the top of the product listings section
-    productListRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    const productListRef =useRef(null);
+    
 
     // Handle changing page
     const handlePageChange = (page) => {
       setCurrentPage(page);
+      // Scroll to the top of the product listings section
+      productListRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     };
+
+    
 
     // Get the products for the current page
     const currentProducts = products.slice(
