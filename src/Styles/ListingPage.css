@@ -91,25 +91,6 @@
     border-radius: 10px;
   }
   
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .promotion-banner {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .promo-text {
-      margin-bottom: 20px;
-    }
-  
-    .promo-image img {
-      width: 100%;
-      height: auto;
-    }
-    .product-listings {
-        padding: 20px 5%;
-    }
-  }
   
 
 /* end of PROMOTION BANNER */
@@ -176,3 +157,95 @@
   
   
   /* end of PRODUCT LISTING */
+
+/* FILTER PAGE */
+
+/* Filter Section */
+.filter {
+    width: 40%;
+    padding: 20px;
+    /* background-color: #f2f2f2; */
+    /* border-radius: 10px; */
+  }
+  
+  /* Section Title */
+  .filter h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Filter Section */
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Filter Buttons (Size, Color, Type, etc.) */
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .filter-buttons button.active {
+    background-color: #4a69e2;
+    color: white;
+  }
+  
+  /* Price Range */
+  .filter-section input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Slider Range Style */
+  .filter-section p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  
+/* END OF FILTER PAGE */
+
+
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .promotion-banner {
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      margin-top: 12px;
+    }
+  
+    .promo-text {
+      margin-bottom: 20px;
+    }
+  
+    .promo-image img {
+      width: 100%;
+      height: auto;
+    }
+    .product-listings {
+        padding: 20px 5%;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      }
+  }

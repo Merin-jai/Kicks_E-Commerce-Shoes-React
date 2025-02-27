@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Banner from '../components/Listing_Banner';
 import ProductListings from '../components/Listing_productsgrid';
+import Filter from '../components/Listing_Filter';
 import "../Styles/ListingPage.css";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -24,6 +25,7 @@ const Listing = () => {
             </button>
         </section>
         <div className='listing-contents'>
+            <Filter/>
             <ProductListings/>
         </div>
         <Footer/>

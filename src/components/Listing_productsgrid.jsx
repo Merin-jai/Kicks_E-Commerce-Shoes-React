@@ -1,11 +1,30 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import ProductCard from './ProductCard';
 import { products } from '../Products';
 
 const ProductListings = () => {
 
+    const [itemsPerPage, setItemsPerPage] = useState(9);
     // Number of products per page
-    const itemsPerPage = 9;
+    // Detect screen size and update items per page
+    useEffect(() => {
+        const updateItemsPerPage = () => {
+          if (window.innerWidth <= 768) {
+            setItemsPerPage(6); // 6 products on mobile
+          } else {
+            setItemsPerPage(9); // Default to 9 products on larger screens
+          }
+        };
+
+        // Call the function to set initial value
+        updateItemsPerPage();
+
+        // Add event listener to handle screen resize
+        window.addEventListener("resize", updateItemsPerPage);
+
+        // Clean up the event listener when component is unmounted
+        return () => window.removeEventListener("resize", updateItemsPerPage);
+    }, []);
     
     // Calculate the total pages
     const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -24,7 +43,12 @@ const ProductListings = () => {
         behavior: "smooth",
         block: "start",
       });
+      scrollToTop();
     };
+
+    const scrollToTop = () =>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     
 

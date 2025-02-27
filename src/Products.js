@@ -88,6 +88,27 @@ export const products = [
         price: "125",
         tag: "New",
       },
+      {
+        id: 13,
+        title: "ADIDAS ULTRABOOST 1.0 MIAMI",
+        image: S1,  
+        price: "125",
+        tag: "New",
+      },
+      {
+        id: 14,
+        title: "ADIDAS OZELIA SHOES Green",
+        image: S2,  // Ensure correct path relative to the assets folder
+        price: "125",
+        tag: "Sale",
+      },
+      {
+        id: 15,
+        title: "ADIDAS 4DFWD 2 RUNNING SHOES",
+        image: S3,
+        price: "125",
+        tag: "New",
+      },
     // Add more products as needed
   ];
   
