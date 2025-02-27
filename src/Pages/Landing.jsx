@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Intro from '../components/Landing_Intro';
 import NewDrops from '../components/Landing_NewDrops';
 import Categories from '../components/Landing_Categories';
+import Reviews from '../components/Landing_reviews';
 import '../Styles/Landingpage.css'
 
 const Landing = () => {
@@ -13,6 +14,7 @@ const Landing = () => {
         <Intro/>
         <NewDrops/>
         <Categories/>
+        <Reviews/>
         <Footer/>
     </div>
   )
