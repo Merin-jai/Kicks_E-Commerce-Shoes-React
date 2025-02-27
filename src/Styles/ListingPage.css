@@ -103,7 +103,7 @@
 
 /* Product Listings Styles */
 .product-listings {
-    padding: 40px 5%;
+    padding: 40px 0%;
     text-align: center;
     margin-bottom: 50px;
   }
@@ -161,63 +161,103 @@
 /* FILTER PAGE */
 
 /* Filter Section */
-.filter {
-    width: 40%;
+.filters {
+    /* background-color: #f1f1f1; */
     padding: 20px;
-    /* background-color: #f2f2f2; */
-    /* border-radius: 10px; */
+    width: 25%;
+    border-radius: 10px;
+    padding-right: 0;
   }
   
-  /* Section Title */
-  .filter h2 {
-    font-size: 1.5rem;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
     font-weight: bold;
+  }
+  
+  .filter-group {
     margin-bottom: 20px;
   }
   
-  /* Individual Filter Section */
-  .filter-section {
-    margin-bottom: 20px;
-  }
-  
-  .filter-section h3 {
-    font-size: 1rem;
-    font-weight: bold;
+  .filter-group span {
+    display: block;
+    font-weight: 600;
     margin-bottom: 10px;
   }
   
-  /* Filter Buttons (Size, Color, Type, etc.) */
-  .filter-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .filter-buttons button {
-    padding: 10px 15px;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+  .refine-buttons button,
+  .size-buttons button,
+  .type-checkboxes label,
+  .gender-checkboxes label {
+    padding: 7px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 0.9rem;
+  }
+
+  .size-buttons button{
+    width:50px;
+    height: 50px;
   }
   
-  .filter-buttons button.active {
-    background-color: #4a69e2;
+  .refine-buttons button.active,
+  .size-buttons button.active,
+  .type-checkboxes input:checked,
+  .gender-checkboxes input:checked {
+    background-color: #333;
     color: white;
   }
   
-  /* Price Range */
-  .filter-section input[type="range"] {
-    width: 100%;
-    margin-bottom: 10px;
+  .color-options button {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
   }
   
-  /* Slider Range Style */
-  .filter-section p {
-    font-size: 1rem;
-    color: #333;
+  input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
   }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  .type-checkboxes,
+  .gender-checkboxes {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .type-checkboxes label,
+  .gender-checkboxes label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
   
   
 /* END OF FILTER PAGE */

@@ -1,90 +1,77 @@
-import React, { useState } from "react";
-// css in listingpage.css
+import React, { useState } from 'react';
 
-const Filter = () => {
-  const [selectedFilters, setSelectedFilters] = useState({
-    refineBy: "Men", // default 'Men'
-    size: [],
-    color: [],
-    type: [],
-    gender: [],
-    priceRange: [0, 1000],
-  });
+const Filters = () => {
+  const [selectedRefine, setSelectedRefine] = useState('Men');
+  const [selectedSize, setSelectedSize] = useState([]);
+  const [selectedColor, setSelectedColor] = useState([]);
+  const [selectedType, setSelectedType] = useState([]);
+  const [selectedGender, setSelectedGender] = useState([]);
+  const [priceRange, setPriceRange] = useState([0, 1000]);
 
-  // Handle selection for the 'Refine By' buttons
-  const handleRefineByChange = (category) => {
-    setSelectedFilters({ ...selectedFilters, refineBy: category });
+  const handleRefineSelect = (value) => {
+    setSelectedRefine(value);
   };
 
-  // Handle size selection
-  const handleSizeChange = (size) => {
-    const updatedSizes = selectedFilters.size.includes(size)
-      ? selectedFilters.size.filter((item) => item !== size)
-      : [...selectedFilters.size, size];
-    setSelectedFilters({ ...selectedFilters, size: updatedSizes });
+  const handleSizeSelect = (size) => {
+    setSelectedSize((prev) =>
+      prev.includes(size) ? prev.filter((item) => item !== size) : [...prev, size]
+    );
   };
 
-  // Handle color selection
-  const handleColorChange = (color) => {
-    const updatedColors = selectedFilters.color.includes(color)
-      ? selectedFilters.color.filter((item) => item !== color)
-      : [...selectedFilters.color, color];
-    setSelectedFilters({ ...selectedFilters, color: updatedColors });
+  const handleColorSelect = (color) => {
+    setSelectedColor((prev) =>
+      prev.includes(color) ? prev.filter((item) => item !== color) : [...prev, color]
+    );
   };
 
-  // Handle product type selection
-  const handleTypeChange = (type) => {
-    const updatedTypes = selectedFilters.type.includes(type)
-      ? selectedFilters.type.filter((item) => item !== type)
-      : [...selectedFilters.type, type];
-    setSelectedFilters({ ...selectedFilters, type: updatedTypes });
+  const handleTypeSelect = (type) => {
+    setSelectedType((prev) =>
+      prev.includes(type) ? prev.filter((item) => item !== type) : [...prev, type]
+    );
   };
 
-  // Handle gender selection
-  const handleGenderChange = (gender) => {
-    const updatedGender = selectedFilters.gender.includes(gender)
-      ? selectedFilters.gender.filter((item) => item !== gender)
-      : [...selectedFilters.gender, gender];
-    setSelectedFilters({ ...selectedFilters, gender: updatedGender });
+  const handleGenderSelect = (gender) => {
+    setSelectedGender((prev) =>
+      prev.includes(gender) ? prev.filter((item) => item !== gender) : [...prev, gender]
+    );
   };
 
-  // Handle price range change
-  const handlePriceChange = (event, newValue) => {
-    setSelectedFilters({ ...selectedFilters, priceRange: newValue });
+  const handlePriceChange = (e) => {
+    setPriceRange([e.target.value[0], e.target.value[1]]);
   };
 
   return (
-    <div className="filter">
+    <div className="filters">
       <h2>Filters</h2>
 
-      {/* Refine By Section */}
-      <div className="filter-section">
-        <h3>Refine By</h3>
-        <div className="filter-buttons">
+      {/* Refine By */}
+      <div className="filter-group">
+        <span>Refine By</span>
+        <div className="refine-buttons">
           <button
-            onClick={() => handleRefineByChange("Men")}
-            className={selectedFilters.refineBy === "Men" ? "active" : ""}
+            className={selectedRefine === 'Men' ? 'active' : ''}
+            onClick={() => handleRefineSelect('Men')}
           >
             Men
           </button>
           <button
-            onClick={() => handleRefineByChange("Casual")}
-            className={selectedFilters.refineBy === "Casual" ? "active" : ""}
+            className={selectedRefine === 'Casual' ? 'active' : ''}
+            onClick={() => handleRefineSelect('Casual')}
           >
             Casual
           </button>
         </div>
       </div>
 
-      {/* Size Section */}
-      <div className="filter-section">
-        <h3>Size</h3>
-        <div className="filter-buttons">
+      {/* Size */}
+      <div className="filter-group">
+        <span>Size</span>
+        <div className="size-buttons">
           {[38, 39, 40, 41, 42, 43, 44, 45, 46, 47].map((size) => (
             <button
               key={size}
-              onClick={() => handleSizeChange(size)}
-              className={selectedFilters.size.includes(size) ? "active" : ""}
+              className={selectedSize.includes(size) ? 'active' : ''}
+              onClick={() => handleSizeSelect(size)}
             >
               {size}
             </button>
@@ -92,76 +79,79 @@ const Filter = () => {
         </div>
       </div>
 
-      {/* Color Section */}
-      <div className="filter-section">
-        <h3>Color</h3>
-        <div className="filter-buttons">
-          {["blue", "orange", "black", "green", "yellow", "gray", "brown"].map((color) => (
+      {/* Color */}
+      <div className="filter-group">
+        <span>Color</span>
+        <div className="color-options">
+          {['blue', 'orange', 'black', 'green', 'yellow', 'brown'].map((color) => (
             <button
               key={color}
-              onClick={() => handleColorChange(color)}
+              className={selectedColor.includes(color) ? 'active' : ''}
+              onClick={() => handleColorSelect(color)}
               style={{ backgroundColor: color }}
-              className={selectedFilters.color.includes(color) ? "active" : ""}
             />
           ))}
         </div>
       </div>
 
-      {/* Product Type Section */}
-      <div className="filter-section">
-        <h3>Type</h3>
-        <div className="filter-buttons">
-          {["Casual shoes", "Runners", "Hiking", "Sneaker", "Basketball", "Golf", "Outdoor"].map((type) => (
-            <button
-              key={type}
-              onClick={() => handleTypeChange(type)}
-              className={selectedFilters.type.includes(type) ? "active" : ""}
-            >
+      {/* Type (Checkboxes) */}
+      <div className="filter-group">
+        <span>Type</span>
+        <div className="type-checkboxes">
+          {[
+            'Casual shoes',
+            'Runners',
+            'Hiking',
+            'Sneaker',
+            'Basketball',
+            'Golf',
+            'Outdoor',
+          ].map((type) => (
+            <label key={type}>
+              <input
+                type="checkbox"
+                checked={selectedType.includes(type)}
+                onChange={() => handleTypeSelect(type)}
+              />
               {type}
-            </button>
+            </label>
           ))}
         </div>
       </div>
 
-      {/* Gender Section */}
-      <div className="filter-section">
-        <h3>Gender</h3>
-        <div className="filter-buttons">
-          {["Men", "Women"].map((gender) => (
-            <button
-              key={gender}
-              onClick={() => handleGenderChange(gender)}
-              className={selectedFilters.gender.includes(gender) ? "active" : ""}
-            >
+      {/* Gender (Checkboxes) */}
+      <div className="filter-group">
+        <span>Gender</span>
+        <div className="gender-checkboxes">
+          {['Men', 'Women'].map((gender) => (
+            <label key={gender}>
+              <input
+                type="checkbox"
+                checked={selectedGender.includes(gender)}
+                onChange={() => handleGenderSelect(gender)}
+              />
               {gender}
-            </button>
+            </label>
           ))}
         </div>
       </div>
 
-      {/* Price Range Section */}
-      <div className="filter-section">
-        <h3>Price</h3>
+      {/* Price */}
+      <div className="filter-group">
+        <span>Price</span>
         <input
           type="range"
           min="0"
           max="1000"
-          value={selectedFilters.priceRange[0]}
-          onChange={(e) => handlePriceChange(e, [e.target.value, selectedFilters.priceRange[1]])}
+          value={priceRange}
+          onChange={handlePriceChange}
         />
-        <input
-          type="range"
-          min="0"
-          max="1000"
-          value={selectedFilters.priceRange[1]}
-          onChange={(e) => handlePriceChange(e, [selectedFilters.priceRange[0], e.target.value])}
-        />
-        <p>
-          ${selectedFilters.priceRange[0]} - ${selectedFilters.priceRange[1]}
-        </p>
+        <span>
+          ${priceRange[0]} - ${priceRange[1]}
+        </span>
       </div>
     </div>
   );
 };
 
-export default Filter;
+export default Filters;
