@@ -9,7 +9,8 @@ const ProductCard = ({ product }) => {
         
         {/* Product Image */}
         <div className="product-image-container">
-          <img src={require(`../assests/img/${product.image}`)} alt={product.title} className="product-image" />
+          {/* <img src={require(`../assests/img/${product.image}`)} alt={product.title} className="product-image" /> */}
+          <img src={product.image} alt={product.title} className="product-image" />
         </div>
   
         {/* Product Info */}

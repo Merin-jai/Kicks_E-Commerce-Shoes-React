@@ -1,21 +1,23 @@
 import React from "react";
 import ProductCard from "./ProductCard"; // Import reusable component
-// import "../Styles/NewDrops.css"; // Import styles
-
+import { useNavigate } from "react-router-dom";
+import { products } from "../Products";
+// CSS in LandingPage.css
 // Sample Product Data (This can come from an API later)
-const products = [
-  { id: 1, image: "S1.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
-  { id: 2, image: "S2.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
-  { id: 3, image: "S3.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "10% off" },
-  { id: 4, image: "S4.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
-];
+// const products = [
+//   { id: 1, image: "S1.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
+//   { id: 2, image: "S2.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
+//   { id: 3, image: "S3.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "10% off" },
+//   { id: 4, image: "S4.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
+// ];
 
 const NewDrops = () => {
+  const navigate=useNavigate();
   return (
     <section className="new-drops-container">
       <div className="new-drops-header">
         <h2>DON’T MISS OUT NEW DROPS</h2>
-        <button className="shop-btn">SHOP NEW DROPS</button>
+        <button className="shop-btn" onClick={()=>{navigate("/listing")}}>SHOP NEW DROPS</button>
       </div>
 
       {/* Product Grid */}
