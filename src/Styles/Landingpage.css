@@ -259,11 +259,142 @@
     .product-tag{
         padding: 3px 10px;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .product-grid {
-      /* grid-template-columns: 1fr; 1 column on small screens */
+    .reviews-container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
     }
   }
+  
+
+
+  /* Review page */
+  /* Reviews Section */
+.reviews-section {
+    /* padding: 50px 5%; */
+    padding-top: 5vw;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .reviews-header
+  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  
+  .reviews-title {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #232321;
+    margin: 0;
+    font-family: "Rubik-bold";
+  }
+  
+  .reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Review Card Component */
+.review-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  /* padding: 20px; */
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* align-items: center; */
+  margin-bottom: 5px;
+  padding: 35px;
+  gap : 5px;
+}
+
+.review-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-star{
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.review-heading{
+  font-family: "Rubik-medium";
+  margin: 0;
+}
+.review-title {
+  font-size: 1rem;
+  color: #232321;
+  /* font-weight: bold; */
+  max-width: 800px;
+  margin: 0;
+  font-family: "OpenSans";
+}
+
+.review-body {
+  display: flex;
+  /* gap: 15px; */
+  align-items: center;
+}
+
+.review-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 20px 20px;
+  object-fit: cover;
+}
+
+.review-user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.review-user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.see-all-button {
+  background-color: #4a69e2;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.see-all-button:hover {
+  background-color: #000000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .review-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
   
