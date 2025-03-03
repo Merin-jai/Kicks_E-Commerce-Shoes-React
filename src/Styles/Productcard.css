@@ -55,10 +55,11 @@
 
 /* View Product Button */
 .view-product-btn {
+    display: block;
     background-color: black;
     color: white;
     font-size: 0.95rem;
-    padding: 12px 15px;
+    padding: 15px 10px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -66,6 +67,7 @@
     font-weight:500;
     transition: background 0.3s ease;
     font-family: "Rubik-medium";
+    text-decoration: none;
 }
 
 .view-product-btn:hover {

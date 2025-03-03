@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Productcard.css"; // Import styles
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
     return (
@@ -15,7 +16,8 @@ const ProductCard = ({ product }) => {
   
         {/* Product Info */}
         <h3 className="product-title">{product.title}</h3>
-        <button className="view-product-btn">VIEW PRODUCT <span className="product-price">- ${product.price}</span></button>
+        <Link to={`/product/${product.id}`} className="view-product-btn">VIEW PRODUCT <span className="product-price">- ${product.price}</span></Link>
+        {/* <button className="view-product-btn">VIEW PRODUCT <span className="product-price">- ${product.price}</span></button> */}
       </div>
     );
   };
