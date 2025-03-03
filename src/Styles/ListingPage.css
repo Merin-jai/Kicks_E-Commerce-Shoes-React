@@ -236,6 +236,10 @@
     cursor: pointer;
     border: 1px solid #ccc;
   }
+  .color-options button.active {
+    border: 3px solid #333;
+
+  }
   
   /* Price Slider */
   .price-range {
@@ -246,10 +250,16 @@
   }
 
   input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #111;
+    height: 5px;
     width: 100%;
     cursor: pointer;
     margin-right: 10px;
+    border-radius: 5px;
   }
+  
 
   input[type="range"]:focus {
     outline: none;
@@ -259,6 +269,16 @@
   .price-range span {
     font-weight: bold;
     font-size: 1rem;
+  }
+  .price-values{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3px;
+  }
+  .price-values span{
+    font-family: "OpenSans";
+    font-weight: 500;
   }
   
   .type-checkboxes,

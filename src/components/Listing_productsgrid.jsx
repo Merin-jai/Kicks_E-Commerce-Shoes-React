@@ -1,9 +1,22 @@
 import React,{useState,useRef,useEffect} from 'react';
 import ProductCard from './ProductCard';
-import { products } from '../Products';
+// import { products } from '../Products';
 
-const ProductListings = () => {
+const ProductListings = ({selectedFilters,products}) => {
+    // Filter products based on selectedFilters
+    const filteredProducts = products.filter((product) => {
+      return (
+        (selectedFilters.size.length === 0 || selectedFilters.size.some(size => product.size.includes(size))) &&
+        (selectedFilters.color.length === 0 || selectedFilters.color.some(color => product.color.includes(color))) &&
+        (selectedFilters.type.length === 0 || selectedFilters.type.includes(product.type)) &&
+        (selectedFilters.gender.length === 0 || selectedFilters.gender.includes(product.gender)) &&
+        product.price >= selectedFilters.priceRange[0] &&
+        product.price <= selectedFilters.priceRange[1]
+      );
+    });
+    
 
+    // State to keep track of the number of products per page
     const [itemsPerPage, setItemsPerPage] = useState(9);
     // Number of products per page
     // Detect screen size and update items per page
@@ -53,7 +66,7 @@ const ProductListings = () => {
     
 
     // Get the products for the current page
-    const currentProducts = products.slice(
+    const currentProducts = filteredProducts.slice(
       (currentPage - 1) * itemsPerPage,
       currentPage * itemsPerPage
     );
