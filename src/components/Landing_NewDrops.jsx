@@ -13,6 +13,7 @@ import { products } from "../Products";
 
 const NewDrops = () => {
   const navigate=useNavigate();
+  const Updatedproducts = products.slice(0, 4); // Show only 4 products
   return (
     <section className="new-drops-container">
       <div className="new-drops-header">
@@ -22,7 +23,7 @@ const NewDrops = () => {
 
       {/* Product Grid */}
       <div className="product-grid">
-        {products.map((product) => (
+        {Updatedproducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

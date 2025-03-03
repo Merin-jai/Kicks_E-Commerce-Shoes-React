@@ -3,12 +3,14 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {auth,googleProvider,signInWithPopup,signInWithEmailAndPassword } from '../firebase';
+import {useNavigate} from 'react-router-dom';
 import '../Styles/Register.css';
 import '../Styles/Login.css';
 // same css as register from register.css
 const Login = () => {
     const [email,setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleEmailLogin = async () => {
         if (!email || !password) {
@@ -18,6 +20,7 @@ const Login = () => {
         try {
           await signInWithEmailAndPassword(auth, email, password);
           alert("Login successful!");
+          navigate("/landing");
         } catch (error) {
           alert(error.message);
         }

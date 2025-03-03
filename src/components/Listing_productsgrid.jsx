@@ -43,12 +43,12 @@ const ProductListings = () => {
         behavior: "smooth",
         block: "start",
       });
-      scrollToTop();
+      // scrollToTop();
     };
 
-    const scrollToTop = () =>{
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    // const scrollToTop = () =>{
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // }
 
     
 
