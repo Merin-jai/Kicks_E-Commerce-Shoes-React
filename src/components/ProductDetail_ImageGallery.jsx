@@ -4,14 +4,14 @@ const ImageGallery = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-    <div className="image-gallery">
+    <div className="P-image-gallery">
       {/* Large Main Image (for both desktop & mobile) */}
-      <div className="main-image">
+      <div className="P-main-image">
         <img src={selectedImage} alt="Main Product" />
       </div>
 
       {/* Desktop: Grid Thumbnails | Mobile: Carousel */}
-      <div className="thumbnail-container">
+      <div className="P-thumbnail-container">
         {images.map((image, index) => (
           <img
             key={index}
@@ -24,7 +24,7 @@ const ImageGallery = ({ images }) => {
       </div>
 
       {/* Mobile: Navigation Dots */}
-      <div className="navigation-dots">
+      <div className="P-navigation-dots">
         {images.map((_, index) => (
           <span
             key={index}

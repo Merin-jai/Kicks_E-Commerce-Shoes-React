@@ -14,18 +14,18 @@
 
 
 /* Main Container */
-.image-gallery {
+.P-image-gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
     margin: auto;
   }
-  .main-image{
+  .P-main-image{
     display: none;
   }
   /* Large Main Image */
-  .main-image img {
+  .P-main-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -33,7 +33,7 @@
   }
   
   /* Grid Thumbnails (Desktop) */
-  .thumbnail-container {
+  .P-thumbnail-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -55,16 +55,16 @@
   
   /* Mobile View: Convert to Carousel */
   @media (max-width: 768px) {
-    .main-image{
+    .P-main-image{
         display: inline;
     }
-    .main-image img {
+    .P-main-image img {
         width: 100%;
         height: auto;
         border-radius: 10px;
         transition: transform 0.3s ease-in-out;
       }
-    .thumbnail-container {
+    .P-thumbnail-container {
       display: flex;
       overflow-x: auto;
       gap: 10px;
@@ -79,7 +79,7 @@
     }
   
     /* Navigation Dots */
-    .navigation-dots {
+    .P-navigation-dots {
       display: flex;
       justify-content: center;
       margin-top: 10px;
