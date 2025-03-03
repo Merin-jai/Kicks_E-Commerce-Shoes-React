@@ -8,12 +8,14 @@ export const products = [
     id: 1,
     title: "ADIDAS ULTRABOOST 1.0 MIAMI",
     image: S1,
+    images : [S1, S2, S3, S4],
     price: 125,
     tag: "New",
     size: [38, 39, 40, 41, 42], // Available sizes
     color: ["blue", "white"], // Available colors
     type: "Casual shoes", // Product type
     gender: "Men", // Suitable for Men
+    description : "Shadow Navy/ Army Green",
   },
   {
     id: 2,
