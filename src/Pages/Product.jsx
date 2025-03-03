@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductDetail from "../components/ProductDetail_ImageGallery";
+import ProductProfile from "../components/ProductDetail_ProductProfile";
 import "../Styles/ProductPage.css";
 
 import { products } from "../Products";
@@ -33,6 +34,7 @@ const ProductDetailPage = () => {
         <Header />
         <div className="product-detail-content">
             <ProductDetail images={product.images} />
+            <ProductProfile product={product} />
         </div>
         
         

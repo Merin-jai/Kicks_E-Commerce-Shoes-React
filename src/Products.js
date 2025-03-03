@@ -15,6 +15,7 @@ export const products = [
     color: ["blue", "white"], // Available colors
     type: "Casual shoes", // Product type
     gender: "Men", // Suitable for Men
+    soldOutSizes: [40],
     description : "Shadow Navy/ Army Green",
   },
   {

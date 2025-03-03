@@ -11,7 +11,7 @@
 
 
 
-
+/* Image Gallery CSS */
 
 /* Main Container */
 .P-image-gallery {
@@ -53,6 +53,160 @@
     transform: scale(1.1);
   }
   
+
+  /* End of image gallery */
+
+
+/* PRODUCTPROFIlEpaGE */
+
+/* Main Container */
+.product-profile {
+    max-width: 400px;
+    margin: auto;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Product Tag */
+  .product-tag {
+    display: inline-block;
+    background: #0047ff;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  
+  /* Product Title */
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Product Price */
+  .product-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1257ff;
+    margin: 5px 0;
+  }
+  
+  /* Sections */
+  .section {
+    margin-top: 15px;
+  }
+  
+  /* Color Options */
+  .color-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .color-circle.selected {
+    border: 2px solid black;
+  }
+  
+  /* Size Selection */
+  .size-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .size-chart {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #1257ff;
+  }
+  
+  .size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .size-button {
+    width: 45px;
+    height: 35px;
+    font-size: 14px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .size-button.selected {
+    background: black;
+    color: white;
+  }
+  
+  .size-button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Action Buttons */
+  .add-to-cart,
+  .buy-now {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .add-to-cart {
+    background: black;
+    color: white;
+  }
+  
+  .buy-now {
+    background: #1257ff;
+    color: white;
+  }
+  
+  .add-to-cart:hover {
+    opacity: 0.8;
+  }
+  
+  .buy-now:hover {
+    opacity: 0.8;
+  }
+  
+  /* Heart Icon */
+  .heart-icon {
+    float: right;
+  }
+  
+  /* About Section */
+  .section h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .section p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  /* end of Product Profile  */
+
+
+
+
   /* Mobile View: Convert to Carousel */
   @media (max-width: 768px) {
     .P-main-image{
