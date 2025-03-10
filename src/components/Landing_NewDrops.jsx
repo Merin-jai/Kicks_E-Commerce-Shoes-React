@@ -11,15 +11,22 @@ import { products } from "../Products";
 //   { id: 4, image: "S4.png", title: "ADIDAS 4DFWD X PARLEY RUNNING SHOES", price: 125, tag: "New" },
 // ];
 
-const NewDrops = () => {
+const NewDrops = ({prop}) => {
   const navigate=useNavigate();
   const Updatedproducts = products.slice(0, 4); // Show only 4 products
   return (
     <section className="new-drops-container">
+      {(prop==="Product") ? 
+      <div className="new-drops-header">
+        <h2>You may also like</h2>
+        <button className="shop-btn" onClick={()=>{navigate("/listing")}}>SHOP NEW DROPS</button>
+      </div> :
       <div className="new-drops-header">
         <h2>DON’T MISS OUT NEW DROPS</h2>
         <button className="shop-btn" onClick={()=>{navigate("/listing")}}>SHOP NEW DROPS</button>
       </div>
+    }
+    
 
       {/* Product Grid */}
       <div className="product-grid">
