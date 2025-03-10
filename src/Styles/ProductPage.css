@@ -7,11 +7,6 @@
 }
 
 
-
-
-
-
-
 /* Image Gallery CSS */
 
 
@@ -80,7 +75,7 @@
 }
 
 /* Product Title */
-.product-title {
+.Product-title {
   font-size: 32px;
   font-weight: bold;
   margin-top: 10px;
@@ -102,7 +97,7 @@
 }
 
 .section-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Rubik-medium";
   margin: 0;
@@ -138,10 +133,10 @@
   display: block;
 }
 
-/* Selected Color Effect */
 .color-circle.selected {
   border: 3px solid black; /* Outer ring effect */
   transform: scale(1.1); /* Slightly bigger */
+  background-color: #555; /* Darken the color */
 }
 /* Size Selection */
 .size-header {
@@ -152,10 +147,11 @@
 }
 
 .size-chart {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: underline;
-  color: #1257ff;
+  color: #232321;
   font-weight: bold;
+  font-family: "Rubik-medium";
 }
 
 .size-options {
@@ -166,10 +162,10 @@
 }
 
 .size-button {
-  width: 40px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   font-size: 14px;
-  border: 1px solid black;
+  border: none;
   background: white;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -211,11 +207,20 @@
 .wishlist-button {
   width: 45px;
   height: 45px;
-  font-size: 18px;
+  font-size: 20px;
   border: 1px solid black;
-  background: white;
+  background: black;
+  color: white;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wishlist-button:hover {
+  background: white;
+  color: black;
+  border: 1px solid white;
 }
 
 .buy-now {
@@ -242,9 +247,19 @@
 .product-description {
   font-size: 14px;
   color: #555;
-  margin-top: 5px;
+  margin-top: 15px;
+  font-family: "OpenSans";
 }
-
+.P-desc
+{
+  font-family: "OpenSans";
+  color: #555;
+}
+.P-desc-list{
+  list-style-type: disc;
+  color: #555;
+  font-family: "OpenSans";
+}
 
   /* end of Product Profile  */
 
