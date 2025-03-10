@@ -1,5 +1,6 @@
 .product-detail-page{
 
+
 }
 .product-detail-content{
     display: flex;
@@ -13,45 +14,44 @@
 
 /* Image Gallery CSS */
 
-/* Main Container */
-.P-image-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: auto;
-  }
-  .P-main-image{
-    display: none;
-  }
-  /* Large Main Image */
-  .P-main-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Grid Thumbnails (Desktop) */
-  .P-thumbnail-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .thumbnail {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
-  }
-  
-  .thumbnail:hover {
-    transform: scale(1.1);
-  }
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+  /* background: #f5f5f5; */
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.grid-item {
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Rounded Corners */
+.rounded-top-left img {
+  border-top-left-radius: 15px;
+}
+
+.rounded-top-right img {
+  border-top-right-radius: 15px;
+}
+
+.rounded-bottom-left img {
+  border-bottom-left-radius: 15px;
+}
+
+.rounded-bottom-right img {
+  border-bottom-right-radius: 15px;
+}
   
 
   /* End of image gallery */
@@ -61,147 +61,191 @@
 
 /* Main Container */
 .product-profile {
-    max-width: 400px;
-    margin: auto;
-    font-family: "Arial", sans-serif;
-  }
-  
-  /* Product Tag */
-  .product-tag {
-    display: inline-block;
-    background: #0047ff;
-    color: white;
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 5px;
-  }
-  
-  /* Product Title */
-  .product-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  /* Product Price */
-  .product-price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #1257ff;
-    margin: 5px 0;
-  }
-  
-  /* Sections */
-  .section {
-    margin-top: 15px;
-  }
-  
-  /* Color Options */
-  .color-options {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .color-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .color-circle.selected {
-    border: 2px solid black;
-  }
-  
-  /* Size Selection */
-  .size-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .size-chart {
-    font-size: 12px;
-    text-decoration: underline;
-    color: #1257ff;
-  }
-  
-  .size-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  
-  .size-button {
-    width: 45px;
-    height: 35px;
-    font-size: 14px;
-    border: 1px solid black;
-    background: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .size-button.selected {
-    background: black;
-    color: white;
-  }
-  
-  .size-button:disabled {
-    background: #ddd;
-    cursor: not-allowed;
-  }
-  
-  /* Action Buttons */
-  .add-to-cart,
-  .buy-now {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .add-to-cart {
-    background: black;
-    color: white;
-  }
-  
-  .buy-now {
-    background: #1257ff;
-    color: white;
-  }
-  
-  .add-to-cart:hover {
-    opacity: 0.8;
-  }
-  
-  .buy-now:hover {
-    opacity: 0.8;
-  }
-  
-  /* Heart Icon */
-  .heart-icon {
-    float: right;
-  }
-  
-  /* About Section */
-  .section h3 {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .section p {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
-  }
+  max-width: 450px;
+  /* margin: auto; */
+  font-family: "Arial", sans-serif;
+  padding: 1.7%;
+}
+
+/* Product Tag */
+.Product-tag {
+  display: inline-block;
+  background: #0047ff;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-family: "Rubik-medium";
+}
+
+/* Product Title */
+.product-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Rubik-bold";
+}
+
+/* Product Price */
+.Product-price {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Rubik-medium";
+  color: #4A69E2;
+  margin: 5px 0;
+}
+
+/* Section */
+.section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Rubik-medium";
+  margin: 0;
+}
+
+/* Color Options */
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Base Circle Style */
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent; /* No border unless selected */
+}
+
+/* Inner Circle */
+.color-circle::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Selected Color Effect */
+.color-circle.selected {
+  border: 3px solid black; /* Outer ring effect */
+  transform: scale(1.1); /* Slightly bigger */
+}
+/* Size Selection */
+.size-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.size-chart {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #1257ff;
+  font-weight: bold;
+}
+
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.size-button {
+  width: 40px;
+  height: 35px;
+  font-size: 14px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  font-family: "Rubik-medium";
+}
+
+.size-button.selected {
+  background: black;
+  color: white;
+}
+
+.size-button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  font-family: "Rubik-medium";
+}
+
+.add-to-cart {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  background: black;
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.wishlist-button {
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-now {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #1257ff;
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-family: "Rubik-medium";
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  opacity: 0.8;
+}
+
+/* About Section */
+.product-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+
   /* end of Product Profile  */
 
 

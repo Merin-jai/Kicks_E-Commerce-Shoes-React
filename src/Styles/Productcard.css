@@ -3,7 +3,7 @@
     padding: 15px;
     border-radius: 15px;
     /* box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15); Improved shadow */
-    /* text-align: center; */
+    text-align: center;
     position: relative;
     transition: transform 0.3s ease;
     max-width: 300px; /* Keep card width consistent */

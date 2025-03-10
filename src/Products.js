@@ -2,13 +2,18 @@ import S1 from "./assests/img/S1.png";
 import S2 from "./assests/img/S2.png";
 import S3 from "./assests/img/S3.png";
 import S4 from "./assests/img/S4.png";
+import S11 from "./assests/img/S11.png";
+import S12 from "./assests/img/S12.png";
+import S13 from "./assests/img/S13.png";
+import S14 from "./assests/img/S14.png";
+
 
 export const products = [
   {
     id: 1,
     title: "ADIDAS ULTRABOOST 1.0 MIAMI",
     image: S1,
-    images : [S1, S2, S3, S4],
+    images : [S11, S12, S13, S14],
     price: 125,
     tag: "New",
     size: [38, 39, 40, 41, 42], // Available sizes
