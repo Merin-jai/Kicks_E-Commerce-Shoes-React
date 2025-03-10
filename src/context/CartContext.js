@@ -5,7 +5,11 @@ export const CartContext = createContext();
 
 // Cart Provider Component
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    // Load cart from localStorage when the app starts
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
   // Load cart from localStorage when the app loads
   useEffect(() => {
@@ -22,6 +26,11 @@ export const CartProvider = ({ children }) => {
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
     console.log("Cart Updated:", [...cart, item]);
+  };
+
+  // Function to remove item from cart
+  const removeFromCart = (index) => {
+    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
   };
 
   return (
