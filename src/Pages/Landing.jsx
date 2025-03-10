@@ -12,7 +12,7 @@ const Landing = () => {
     <div>
         <Header />
         <Intro/>
-        <NewDrops/>
+        <NewDrops prop=""/>
         <Categories/>
         <Reviews/>
         <Footer/>
