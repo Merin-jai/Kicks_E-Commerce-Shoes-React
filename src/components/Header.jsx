@@ -1,12 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import '../Styles/main_components.css';
 import { TiArrowSortedDown } from "react-icons/ti";
 import { IoSearch } from "react-icons/io5";
 import { FaUser } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { CartContext } from '../context/CartContext';
 import Logo from '../assests/img/Logo.png';
 const Header = () => {
   const [menuOpen,setMenuOpen]=useState(false);
+  const {cart} = useContext(CartContext);
 
   return (
     <div className='header-container'>
@@ -38,9 +40,9 @@ const Header = () => {
         <div className='header-right'>
             <div className='search'><IoSearch className='icons'/></div>
             <FaUser className='icons'/>
-            <div className='circle'>
-              <label>0</label>
-            </div>
+            <a className='circle' href="#">
+              <label>{cart.length}</label>
+            </a>
         </div>
     </div>
   )

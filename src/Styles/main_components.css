@@ -66,6 +66,11 @@ body {
     font-family: "Rubik";
     font-weight: 600;
     font-size: 1vw;
+    text-decoration: none;
+}
+.circle:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 

@@ -1,9 +1,34 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { CartContext } from "../context/CartContext";
 
 const ProductProfile = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState(product.color[0]);
   const [selectedSize, setSelectedSize] = useState(null);
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
+    }
+    if(!selectedColor){
+      alert("Please select a color before adding to cart.");
+      return;
+    }
+
+    const cartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      color: selectedColor,
+      size: selectedSize,
+      image: product.image,
+      quantity: 1, // Default quantity to 1
+    };
+
+    addToCart(cartItem);
+  };
 
   return (
     <div className="product-profile">
@@ -15,20 +40,19 @@ const ProductProfile = ({ product }) => {
       <p className="Product-price">${product.price.toFixed(2)}</p>
 
       {/* Color Selection */}
-        <div className="section">
-          <h3 className="section-title">COLOR</h3>
-          <div className="color-options">
-            {product.color.map((color, index) => (
-              <div
-                key={index}
-                className={`color-circle ${selectedColor === color ? "selected" : ""}`}
-                style={{ backgroundColor: color }}
-                onClick={() => setSelectedColor(color)}
-              ></div>
-            ))}
-          </div>
+      <div className="section">
+        <h3 className="section-title">COLOR</h3>
+        <div className="color-options">
+          {product.color.map((color, index) => (
+            <div
+              key={index}
+              className={`color-circle ${selectedColor === color ? "selected" : ""}`}
+              style={{ backgroundColor: color }}
+              onClick={() => setSelectedColor(color)}
+            ></div>
+          ))}
         </div>
-
+      </div>
 
       {/* Size Selection */}
       <div className="section">
@@ -52,7 +76,7 @@ const ProductProfile = ({ product }) => {
 
       {/* Action Buttons */}
       <div className="action-buttons">
-        <button className="add-to-cart">ADD TO CART</button>
+        <button className="add-to-cart" onClick={handleAddToCart}>ADD TO CART</button>
         <button className="wishlist-button"><IoMdHeartEmpty/></button>
       </div>
       <button className="buy-now">BUY IT NOW</button>
