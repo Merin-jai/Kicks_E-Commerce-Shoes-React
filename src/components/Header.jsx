@@ -40,7 +40,7 @@ const Header = () => {
         <div className='header-right'>
             <div className='search'><IoSearch className='icons'/></div>
             <FaUser className='icons'/>
-            <a className='circle' href="#">
+            <a className='circle' href="/cart">
               <label>{cart.length}</label>
             </a>
         </div>

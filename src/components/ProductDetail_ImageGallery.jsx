@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 
+// css in ProductPage.css
 const ImageGrid = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 

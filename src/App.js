@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import Landing from './Pages/Landing';
 import Listing from './Pages/Listing';
 import Product from './Pages/Product';
+import Cart from './Pages/CartPage';
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/landing" element={<Landing/>}/>
         <Route path="/listing" element={<Listing/>}/>
         <Route path="/product/:id" element={<Product/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </Router>
   );

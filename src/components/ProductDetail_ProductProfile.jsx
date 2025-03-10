@@ -2,6 +2,7 @@ import React, { useState,useContext } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { CartContext } from "../context/CartContext";
 
+// css in productPage.css
 const ProductProfile = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState(product.color[0]);
   const [selectedSize, setSelectedSize] = useState(null);
