@@ -7,6 +7,7 @@ import Landing from './Pages/Landing';
 import Listing from './Pages/Listing';
 import Product from './Pages/Product';
 import Cart from './Pages/CartPage';
+import Header from './Pages/ChekoutPage';
 function App() {
   return (
     <Router>
@@ -17,6 +18,9 @@ function App() {
         <Route path="/listing" element={<Listing/>}/>
         <Route path="/product/:id" element={<Product/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path='*' element={<h1>Not Found</h1>} />
+        <Route path="/checkout" element={<Header/>}/>
+
       </Routes>
     </Router>
   );

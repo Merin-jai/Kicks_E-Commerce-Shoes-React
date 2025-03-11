@@ -1,6 +1,6 @@
 import React from "react";
 import { IoTrashBinOutline } from "react-icons/io5";
-import { FaHeart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
 
 const CartItem = ({ item, index, updateQuantity, removeFromCart }) => {
   return (
@@ -13,25 +13,27 @@ const CartItem = ({ item, index, updateQuantity, removeFromCart }) => {
         <p className="cart-item-color">
           {item.color}  
         </p>
-        <div>
-            Size : <select className="cart-size-dropdown">
+        <div className="cart-item-size-quantity"> 
+           <div> Size : <select className="cart-size-dropdown">
             <option>{item.size}</option> 
-          </select>
-          Quantity <select
-          className="cart-quantity-dropdown"
-          value={item.quantity}
-          onChange={(e) => updateQuantity(index, parseInt(e.target.value))}
-        >
-          {[1, 2, 3, 4, 5].map((qty) => (
-            <option key={qty} value={qty}>
-              {qty}
-            </option>
-          ))}
-        </select>
+          </select></div>
+          <div>
+            Quantity <select
+                  className="cart-quantity-dropdown"
+                  value={item.quantity}
+                  onChange={(e) => updateQuantity(index, parseInt(e.target.value))}
+                >
+                  {[1, 2, 3, 4, 5].map((qty) => (
+                    <option key={qty} value={qty}>
+                      {qty}
+                    </option>
+                  ))}
+            </select>
+          </div>
 
         </div>
         <div className="cart-icons">
-          <FaHeart className="cart-wishlist-icon" />
+          <CiHeart className="cart-wishlist-icon" />
           <IoTrashBinOutline className="cart-remove-icon" onClick={() => removeFromCart(index)} />
         </div>
       </div>
