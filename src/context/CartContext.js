@@ -11,12 +11,6 @@ export const CartProvider = ({ children }) => {
     return storedCart ? JSON.parse(storedCart) : [];
   });
 
-  // Load cart from localStorage when the app loads
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(storedCart);
-  }, []);
-
   // Save cart to localStorage whenever it updates
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -25,7 +19,6 @@ export const CartProvider = ({ children }) => {
   // Function to add item to cart
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
-    console.log("Cart Updated:", [...cart, item]);
   };
 
   // Function to remove item from cart
@@ -33,8 +26,13 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) => prevCart.filter((_, i) => i !== index));
   };
 
+  // Function to update cart
+  const updateCart = (updatedCart) => {
+    setCart(updatedCart);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateCart }}>
       {children}
     </CartContext.Provider>
   );
